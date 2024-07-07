@@ -1,0 +1,29 @@
+@RestController
+@RequestMapping("/api/books")
+public class BookController {
+    
+    @GetMapping
+    public List<Book> getAllBooks() {
+        // logic to retrieve books
+    }
+
+    @GetMapping("/{id}")
+    public Book getBookById(@PathVariable Long id) {
+        // logic to retrieve a book by ID
+    }
+
+    @PostMapping
+    public Book createBook(@RequestBody Book book) {
+        // logic to create a new book
+    }
+
+    @PutMapping("/{id}")
+    public Book updateBook(@PathVariable Long id, @RequestBody Book book) {
+        // logic to update a book
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteBook(@PathVariable Long id) {
+        // logic to delete a book
+    }
+}
